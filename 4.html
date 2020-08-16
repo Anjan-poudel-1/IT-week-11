@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+<form>
+
+
+    <input type ="number" id = "weekday" placeholder="Enter a day" max="7" min="1"  style="width: 150px;">
+    <br><br>
+   <button id = "btn">Submit</button>
+</form>
+    <script>
+var submit = document.getElementById("btn");
+
+submit.addEventListener("click",()=>{
+console.log(" clicked")
+var day = document.getElementById("weekday").value;
+var detail="";
+switch(day){
+
+            case "1": detail="Sunday"; 
+            break;
+            case "2": detail="Monday"; 
+            break;
+            case "3": detail="Tuesday"; 
+            break;
+            case "4": detail="Wednesday"; 
+            break;
+            case "5": detail="Thursday"; 
+            break;
+            case "6": detail="Friday"; 
+            break;
+            case "7": detail="Saturday"; 
+            break;
+            default: detail="Enter valid day "; 
+            break;           
+
+}
+
+
+alert(detail);
+})
+    </script>
+</body>
+</html>

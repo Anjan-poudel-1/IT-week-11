@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+     .data{
+         margin: 200px 400px;
+     }   
+.heading{
+    background-color: #3891A7;
+}
+.heading td{
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+table tr td{
+width: 180px;
+height: 50px;
+text-align: center;
+}
+.odd{
+    background-color: #CEDCE1;
+}
+.even{
+    background-color: #E8EEF1;
+}
+    </style>
+</head>
+<body>
+   
+    <div class="data"></div>
+
+   
+
+
+    <script>
+var input = document.querySelector(".data");
+var heading = document.createElement("tr");
+
+heading.classList.add("heading");
+heading.innerHTML = "<td>S.N.</td><td>Name</td><td>Image</td>";
+
+var table_data=document.createElement("table");
+
+table_data.classList.add("table_data")
+
+table_data.append(heading)
+
+for (var i = 1 ; i <=4 ; i++){
+var indivisual_data = document.createElement("tr");
+if(i & 1){
+    indivisual_data.classList.add("odd");
+}
+else{
+    indivisual_data.classList.add("even");
+}
+indivisual_data.innerHTML = "<tr><td>"+i+"</td><td> Name "+i+"</td><td>"+i+".jpg</td></tr>";
+table_data.append(indivisual_data);
+}
+input.appendChild(table_data);
+console.log(input.textContent)
+    </script>
+</body>
+</html>
